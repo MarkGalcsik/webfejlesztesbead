@@ -1,0 +1,450 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    background: #f4f3ee;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "header header"
+    "article article"
+    "figure figure"
+    "footer footer";
+}
+
+/*Header*/
+header {
+    grid-area: header;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "main menu-gomb";
+}
+
+.main {
+    grid-area: main;
+    justify-items: left;
+    align-items: center;
+    padding: 5px;
+    font-size: 2rem;
+}
+
+.menu-gomb {
+    grid-area: menu-gomb;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+/*menü*/
+.lista {
+    background-color: #f4f3ee;
+    height: 50vh;
+    width: 100%;
+    position: fixed;
+    top: -800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    transition: 0.5s ease-in-out;
+    margin-top: 15%;
+}
+
+.lista ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.lista ul li {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #838383;
+}
+
+.lista.aktiv {
+    top: 0;
+    margin-top: 20%;
+}
+
+.gep-menu {
+    display: none;
+}
+
+/*Article*/
+article {
+    grid-area: article;
+}
+
+/*Figure*/
+figure {
+    grid-area: figure;
+}
+
+/*Footer*/
+footer {
+    grid-area: footer;
+}
+
+/*Main slider*/
+section.slider {
+    width: 100%;
+    margin: 0;
+}
+
+.slider {
+    width: 100%;
+    margin: 0;
+}
+
+.slick-slide {
+    margin: 0px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.szoveg-slider {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f4f3ee;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.szoveg-slider2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(27, 27, 27);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.slider-gomb {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider-gomb a {
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    color: #f4f3ee;
+    display: block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.slider-gomb a:hover {
+    transition: 0.4s ease-in-out;
+    transform: scale(1.1);
+}
+
+/*Üdvözöljük*/
+.udv-cim {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 20px;
+}
+
+.udv-tartalom {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.gomb {
+    padding: 10px;
+    margin: 50px 0 50px 0;
+}
+
+.gomb a {
+    text-decoration: none;
+    color:white;
+    background: black;
+    display: block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+.gomb a:hover {
+    background-color: #f4f3ee;
+    color: black;
+    transition: 0.4s ease-in-out;
+    transform: scale(1.1);
+}
+
+/*Szolgáltatások*/
+.szolg-cim {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 40px;
+    background: white;
+    margin: 0;
+}
+
+.szolg-slick {
+    width: 80%;
+    min-width: 400px;
+    margin: 100px auto;
+}
+
+.szolg-slick-slide {
+    margin: 0px 5px;
+}
+
+.szolg-slick-slide img {
+    width: 100%;
+}
+
+.szolg-slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.szolg-slick-active {
+    opacity: .5;
+}
+
+.szolg-slick-current {
+    opacity: 1;
+}
+
+div.lap {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+div.lap p {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+/*Rólunk*/
+.rolunk-cim {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 40px;
+    margin: 0;
+}
+
+.rolunk-tartalom {
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 40px;
+    margin: 0 20px 0 20px;
+}
+
+.varunk {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.gomb1 a {
+    text-decoration: none;
+    color:white;
+    background: black;
+    display: block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    padding: 10px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+
+.gomb1 a:hover {
+    background-color: #f4f3ee;
+    color: black;
+    transition: 0.4s ease-in-out;
+    transform: scale(1.1);
+}
+
+
+/*Figure*/
+figure {
+    text-align: center;
+}
+
+figure img {
+    width: 80%;
+    border: 10px solid #000000d0;
+}
+
+/*Footer*/
+footer {
+    text-align: center;
+    background: white;
+}
+
+.svg-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline;
+    padding: 10px;
+}
+
+@media screen and (min-width: 600px) {
+
+}
+
+@media screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 2fr auto;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: 
+        "header nav"
+        "slider slider"
+        "udv udv"
+        "szolg szolg"
+        "rolunk figure"
+        "footer footer";
+    }
+    
+    /*fejléc*/
+    header{
+        grid-area: header;
+        display: block;
+    }
+
+    header p.main {
+        font-size: 2rem;
+    }
+
+    /*menü*/
+    nav {
+        grid-area: nav;
+    }
+
+    nav.gep-menu {
+        display: block;
+        align-items: center;
+        margin: auto;
+    }
+
+    nav.gep-menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    nav.gep-menu ul li {
+        padding: 30px;
+        font-size: 1.1rem;
+    }
+
+    nav.gep-menu ul li a {
+        display: block;
+        text-decoration: none;
+        color: black;
+    }
+
+    .menu-gomb {
+        display: none;
+    }
+
+    .lista {
+        display: none;
+    }
+
+    /*Main slider*/
+    .slider {
+        grid-area: slider;
+    }
+
+    .szoveg-slider, .szoveg-slider2 {
+        font-size: 2rem;
+    }
+
+    .slider-gomb {
+        font-size: 1.5rem;
+    }
+
+    /*Üdvözöljük*/
+    .udv {
+        grid-area: udv;
+    }
+
+    .udv-cim {
+        font-size: 2rem;
+    }
+
+    .udv-tartalom {
+        font-size: 1.5rem;
+    }
+
+    /*Szolgáltatások*/
+    .szolg {
+        grid-area: szolg;
+    }
+
+    .szolg-cim {
+        font-size: 2rem;
+    }
+
+    /*Rólunk*/
+    .rolunk {
+        grid-area: rolunk;
+        width: 50%;
+    }
+
+    .rolunk-cim {
+        font-size: 2rem;
+    }
+
+    .rolunk-tartalom {
+        font-size: 1.5rem;
+    }
+
+    /*Figure*/
+    figure {
+        grid-area: figure;
+        width: 10%;
+        height: fit-content;
+    }
+
+
+}
